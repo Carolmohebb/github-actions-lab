@@ -1,6 +1,10 @@
 name: Hello Agile
 
-on: [push]
+on:
+  push:
+    branches: [ dev ]          # Runs when you push to the dev branch
+  pull_request:
+    branches: [ main ]         # Runs when you open or update a PR to main
 
 jobs:
   say_hello:
